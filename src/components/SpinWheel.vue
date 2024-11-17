@@ -33,9 +33,10 @@
     textDirection: 'vertical',
     borderColor: '#584b43',
     borderWidth: 6,
-    lineHeight: 30,
+    lineHeight: 1,
     fontSize: 20,
-    textLength: 20
+    textLength: 20,
+    textRadius: 235,
   }
   
   const jobs = [
