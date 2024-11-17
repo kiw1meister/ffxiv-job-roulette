@@ -256,6 +256,6 @@
   ]
   
   function onRotateEnd (job: Job) {
-    alert("You should play " + job.name)
+    alert("You should play " + job.name + "!")
   }
   </script>
