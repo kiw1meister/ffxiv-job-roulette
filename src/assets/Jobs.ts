@@ -1,6 +1,6 @@
-export const ffxivJobs = {
+export const ffxivJobs = [
     //tanks
-    pld: {
+    {
         id: 1,
         name: "Paladin",
         role: "Tank",
@@ -8,9 +8,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#2d3a80",
         color: '#ffffff',
-        probability: 4.761
+        weight: 1
     },
-    war: {
+    {
         id: 2,
         name: "Warrior",
         role: "Tank",
@@ -18,9 +18,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#2d3a80",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    drk: {
+    {
         id: 3,
         name: "Dark Knight",
         role: "Tank",
@@ -28,9 +28,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#2d3a80",
         color: '#ffffff',
-        probability: 4.761
+        weight: 1
     },
-    gnb: {
+    {
         id: 4,
         name: "Gunbreaker",
         role: "Tank",
@@ -38,10 +38,10 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#2d3a80",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
     //healers
-    whm: {
+    {
         id: 5,
         name: "White Mage",
         role: "Healer",
@@ -49,9 +49,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#336624",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    sch: {
+    {
         id: 6,
         name: "Scholar",
         role: "Healer",
@@ -59,9 +59,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#336624",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    ast: {
+    {
         id: 7,
         name: "Astrologian",
         role: "Healer",
@@ -69,9 +69,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#336624",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    sge: {
+    {
         id: 8,
         name: "Sage",
         role: "Healer",
@@ -79,10 +79,10 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#336624",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
     //Melee DPS
-    mnk: {
+    {
         id: 9,
         name: "Monk",
         role: "Melee DPS",
@@ -90,9 +90,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    drg: {
+    {
         id: 10,
         name: "Dragoon",
         role: "Melee DPS",
@@ -100,9 +100,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    nin: {
+    {
         id: 11,
         name: "Ninja",
         role: "Melee DPS",
@@ -110,9 +110,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    sam: {
+    {
         id: 12,
         name: "Samurai",
         role: "Melee DPS",
@@ -120,9 +120,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    rpr: {
+    {
         id: 13,
         name: "Reaper",
         role: "Melee DPS",
@@ -130,9 +130,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    vpr: {
+    {
         id: 14,
         name: "Viper",
         role: "Melee DPS",
@@ -140,10 +140,10 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
     //Physical Ranged DPS
-    brd: {
+    {
         id: 15,
         name: "Bard",
         role: "Physical Ranged DPS",
@@ -151,9 +151,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    mch: {
+    {
         id: 16,
         name: "Machinist",
         role: "Physical Ranged DPS",
@@ -161,9 +161,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    dnc: {
+    {
         id: 17,
         name: "Dancer",
         role: "Physical Ranged DPS",
@@ -171,10 +171,10 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
     //Magical Ranged DPS
-    blm: {
+    {
         id: 18,
         name: "Black Mage",
         role: "Magical Ranged DPS",
@@ -182,9 +182,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    smn: {
+    {
         id: 19,
         name: "Summoner",
         role: "Magical Ranged DPS",
@@ -192,9 +192,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    rdm: {
+    {
         id: 20,
         name: "Red Mage",
         role: "Magical Ranged DPS",
@@ -202,9 +202,9 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
-    pct: {
+    {
         id: 21,
         name: "Pictomancer",
         role: "Magical Ranged DPS",
@@ -212,7 +212,7 @@ export const ffxivJobs = {
         pic: "",
         bgColor: "#732828",
         color: '#ffffff',
-        probability: 4.762
+        weight: 1
     },
     //Limited
     // blu: {
@@ -222,4 +222,4 @@ export const ffxivJobs = {
     //     icon: "",
     //     pic: "",
     // }
-}
+]
