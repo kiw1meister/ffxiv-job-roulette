@@ -14,8 +14,11 @@
         color: string,
         probability: number
     }
+
+    const emit = defineEmits(['playJob', 'popUpDisplay'])
   
     const canvasVerify = ref(false) // Whether the turntable in canvas mode is enabled for verification
+    
     const canvasOptions = {
         btnWidth: 140,
         btnText: "Spin!",
@@ -31,7 +34,9 @@
     const jobs = ffxivJobs;
   
     function onRotateEnd (job: Job) {
-        alert("You should play " + job.name + "!")
+        //alert("You should play " + job.name + "!")
+        emit('playJob', job)
+        emit('popUpDisplay', true)
     }
 </script>
 

@@ -1,5 +1,10 @@
 <script setup lang="ts">
+  import { ref } from 'vue'
   import SpinWheel from './components/SpinWheel.vue';
+  import PopUp from './components/PopUp.vue';
+
+  let popUpDisplay = ref<boolean>(false)
+  let rolledJob = ref(null)
 </script>
 
 <template>
@@ -9,11 +14,15 @@
       <p>Made in Vue.js by Shion with love <3</p>
     </div>
     <div class="p-5">
-      <SpinWheel class="w-full h-full"/>
+      <SpinWheel
+        class="w-full h-full"
+        @playJob="(job) => rolledJob = job"
+        @popUpDisplay="popUpDisplay = true"
+        />
     </div>
+    <PopUp v-if="popUpDisplay"
+      :playJob="rolledJob"
+      @popUpDisplay="popUpDisplay = false"
+    />
   </body>
 </template>
-
-<style scoped>
-
-</style>

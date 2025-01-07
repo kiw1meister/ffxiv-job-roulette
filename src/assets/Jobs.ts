@@ -4,8 +4,8 @@ export const ffxivJobs = [
         id: 1,
         name: "Paladin",
         role: "Tank",
-        icon: "",
-        pic: "",
+        icon: "https://lds-img.finalfantasyxiv.com/promo/h/V/NUXU4h6iXzF8HS4BxHKYf7vOa0.png",
+        pic: "https://i.kym-cdn.com/photos/images/original/001/721/586/194.png",
         bgColor: "#2d3a80",
         color: '#ffffff',
         weight: 1
@@ -14,8 +14,8 @@ export const ffxivJobs = [
         id: 2,
         name: "Warrior",
         role: "Tank",
-        icon: "",
-        pic: "",
+        icon: "https://lds-img.finalfantasyxiv.com/promo/h/0/U3f8Q98TbAeGvg_vXiHGOaa2d4.png",
+        pic: "https://i.kym-cdn.com/entries/icons/original/000/026/152/gigachadd.jpg",
         bgColor: "#2d3a80",
         color: '#ffffff',
         weight: 1
@@ -24,8 +24,8 @@ export const ffxivJobs = [
         id: 3,
         name: "Dark Knight",
         role: "Tank",
-        icon: "",
-        pic: "",
+        icon: "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png",
+        pic: "https://bigmemes123.funnyjunk.com/pictures/Goddamn+weeaboos_3a8843_8451925.jpg",
         bgColor: "#2d3a80",
         color: '#ffffff',
         weight: 1
@@ -34,8 +34,8 @@ export const ffxivJobs = [
         id: 4,
         name: "Gunbreaker",
         role: "Tank",
-        icon: "",
-        pic: "",
+        icon: "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png",
+        pic: "https://preview.redd.it/1b5kwxplos131.jpg?auto=webp&s=ce51d50902bd70f90de433196d1dc9b13ffbbfaa",
         bgColor: "#2d3a80",
         color: '#ffffff',
         weight: 1
