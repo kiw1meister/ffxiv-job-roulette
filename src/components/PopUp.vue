@@ -1,16 +1,6 @@
 <script setup lang="ts">
     import { PropType } from 'vue'
-
-    interface Job {
-        id: number,
-        name: string,
-        role: string,
-        icon: string,
-        pic: string,
-        bgColor: string,
-        color: string,
-        probability: number
-    }
+    import { Job } from '../assets/interfaces/Job'
 
     defineProps({
         playJob: {

@@ -1,19 +1,9 @@
 <script setup lang="ts">
     import { ref } from 'vue'
-    import { ffxivJobs } from '../assets/Jobs';
+    import { ffxivJobs } from '../assets/JobList';
     import FortuneWheel from 'vue-fortune-wheel'
+    import { Job } from '../assets/interfaces/Job';
     import 'vue-fortune-wheel/style.css'
-
-    interface Job {
-        id: number,
-        name: string,
-        role: string,
-        icon: string,
-        pic: string,
-        bgColor: string,
-        color: string,
-        probability: number
-    }
 
     const emit = defineEmits(['playJob', 'popUpDisplay'])
   
