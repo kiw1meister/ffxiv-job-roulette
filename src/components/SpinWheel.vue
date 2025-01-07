@@ -1,8 +1,8 @@
 <script setup lang="ts">
     import { ref } from 'vue'
-    import { ffxivJobs } from '../assets/JobList';
     import FortuneWheel from 'vue-fortune-wheel'
     import { Job } from '../assets/interfaces/Job';
+    import { useJobStore } from '../stores/JobStore';
     import 'vue-fortune-wheel/style.css'
 
     const emit = defineEmits(['playJob', 'popUpDisplay'])
@@ -21,7 +21,10 @@
         textRadius: 235,
     }
   
-    const jobs = ffxivJobs;
+    const jobs = useJobStore();
+
+    // Test store modification
+    // jobs.useMock();
   
     function onRotateEnd (job: Job) {
         //alert("You should play " + job.name + "!")
@@ -37,7 +40,7 @@
         :verify="canvasVerify"
         :canvas="canvasOptions"
         :useWeight="true"
-        :prizes="jobs"
+        :prizes="jobs.list"
         @rotateEnd="onRotateEnd"
       />
     </div>
