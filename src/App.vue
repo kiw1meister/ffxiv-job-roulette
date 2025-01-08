@@ -2,6 +2,7 @@
   import { ref } from 'vue'
   import SpinWheel from './components/SpinWheel.vue';
   import PopUp from './components/PopUp.vue';
+  import FilterMenu from './components/FilterMenu.vue';
 
   let popUpDisplay = ref<boolean>(false)
   let rolledJob = ref(null)
@@ -24,5 +25,6 @@
       :playJob="rolledJob"
       @popUpDisplay="popUpDisplay = false"
     />
+    <FilterMenu />
   </body>
 </template>

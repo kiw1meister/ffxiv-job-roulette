@@ -10,7 +10,6 @@
 
     const emit = defineEmits(['popUpDisplay'])
     
-
 </script>
 
 <template>
