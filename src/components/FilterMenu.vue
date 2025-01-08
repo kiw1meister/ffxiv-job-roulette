@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { useJobStore } from '../stores/JobStore';
-import { ffxivJobs } from '../assets/JobList';
+// import { useJobStore } from '../stores/JobStore';
+// import { ffxivJobs } from '../assets/JobList';
 
 const openSidebar = ref<boolean>(false);
 const toggleSidebar = () => {
@@ -35,14 +35,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-     <header class="h-16">
+    <header class="h-16">
     <div class="h-full w-full flex items-center bg-velvet text-frostWhite">
-      <!-- <h1
-        class="w-full text-center text-3xl font-semibold hover:cursor-pointer"
-        @click="handleGoHome"
-      >
 
-      </h1> -->
       <button class="hamburger absolute top-3 left-5 p-2" @click="toggleSidebar">
         <!-- Hamburger Menu -->
         <svg
