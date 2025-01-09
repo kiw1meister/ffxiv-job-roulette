@@ -7,7 +7,7 @@ export const useJobStore = defineStore(
     'jobStore',
     () => {
         const allJobs = reactive([...ffxivJobs]); // Source data for all jobs
-        const selectedJobs = ref([]); // Array to hold selected jobs
+        const selectedJobs = ref(allJobs.filter(job => job.role !== "Limited Job")); // All jobs except Limited Jobs selected by default
 
         // Toggle a job's selection
         const toggleJob = (job:Job, isChecked:boolean) => {
@@ -21,7 +21,17 @@ export const useJobStore = defineStore(
                 ); // Remove from selected jobs
             }
         };
+
+        // Selects all jobs except those with the "Limited Job" role
+        const selectAll = () => {
+            selectedJobs.value = allJobs.filter(job => job.role !== "Limited Job");
+        };
+
+        // Deselect all jobs
+        const deselectAll = () => {
+            selectedJobs.value = [];
+        };
         
-        return { allJobs, selectedJobs, toggleJob };
+        return { allJobs, selectedJobs, selectAll, deselectAll, toggleJob };
     }
 )

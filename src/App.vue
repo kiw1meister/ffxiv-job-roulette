@@ -17,18 +17,20 @@
 <template>
   <body class="min-h-screen bg-slate-500">
     <div class="text-center py-10">
-      <h1 class="text-5xl">FFXIV Job Roulette</h1>
-      <p>Made in Vue.js by Shion with love <3</p>
+      <h1 class="text-5xl font-bold text-white">FFXIV Job Roulette</h1>
+      <p class="text-white">Made in Vue.js by Shion with love <3</p>
     </div>
-    <div class="flex justify-center">
+    <div class="flex flex-col justify-center">
       <button
-        class="bg-black rounded-xl px-3 hover:animate-pulse mx-auto"
+        class="bg-black text-white rounded-xl px-3 hover:animate-pulse mx-auto text-xl mb-2"
         @click="showFilterMenu"
       >
         Filter Classes
       </button>
+      <div class="mx-auto">
+        <FilterMenu />
+      </div>
     </div>
-    <FilterMenu />
     <div class="p-5">
       <SpinWheel
         class="w-full h-full"

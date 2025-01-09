@@ -71,12 +71,12 @@ const onCheckboxChange = (job, isChecked) => {
 </script>
 
 <template>
-  <div class="flex flex-col bg-black rounded-xl w-fit p-3">
+  <div class="flex flex-col bg-black text-white rounded-xl w-fit p-3">
 
     <!-- Tanks Section -->
-    <section class="text-center">
+    <section class="text-center mb-2 pb-2 border-b">
       <h2 class="text-lg font-bold mb-2">Tanks</h2>
-      <div class="flex items-center gap-2">
+      <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in tankJobs" 
           :key="job.name" 
@@ -94,9 +94,9 @@ const onCheckboxChange = (job, isChecked) => {
     </section>
 
     <!-- Melee Section -->
-    <section class="text-center">
+    <section class="text-center mb-2 pb-2 border-b">
       <h2 class="text-lg font-bold mb-2">Melee DPS</h2>
-      <div class="flex items-center gap-2">
+      <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in meleeJobs" 
           :key="job.name" 
@@ -114,9 +114,9 @@ const onCheckboxChange = (job, isChecked) => {
     </section>
 
     <!-- Ranged Section -->
-    <section class="text-center">
+    <section class="text-center mb-2 pb-2 border-b">
       <h2 class="text-lg font-bold mb-2">Physical Ranged DPS</h2>
-      <div class="flex items-center gap-2">
+      <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in rangedJobs" 
           :key="job.name" 
@@ -134,9 +134,9 @@ const onCheckboxChange = (job, isChecked) => {
     </section>
 
     <!-- Magic Section -->
-    <section class="text-center">
+    <section class="text-center mb-2 pb-2 border-b">
       <h2 class="text-lg font-bold mb-2">Magical Ranged DPS</h2>
-      <div class="flex items-center gap-2">
+      <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in magicJobs" 
           :key="job.name" 
@@ -154,9 +154,9 @@ const onCheckboxChange = (job, isChecked) => {
     </section>
 
     <!-- Healer Section -->
-    <section class="text-center">
+    <section class="text-center mb-2 pb-2 border-b">
       <h2 class="text-lg font-bold mb-2">Healers</h2>
-      <div class="flex items-center gap-2">
+      <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in healerJobs" 
           :key="job.name" 
@@ -174,9 +174,9 @@ const onCheckboxChange = (job, isChecked) => {
     </section>
 
     <!-- Limited Jobs -->
-    <section class="text-center">
+    <section class="text-center mb-2 pb-2 border-b">
       <h2 class="text-lg font-bold mb-2">Limited Jobs</h2>
-      <div class="flex items-center gap-2">
+      <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in limitedJobs" 
           :key="job.name" 
@@ -191,6 +191,23 @@ const onCheckboxChange = (job, isChecked) => {
           {{ job.name }}
         </label>
       </div>
+    </section>
+
+    <!-- Select Options -->
+    <section class="text-center mb-2">
+      <h2 class="text-lg font-bold mb-2">Options</h2>
+      <button
+        class="bg-slate-500 px-2 mx-2 rounded-xl hover:animate-pulse"
+        @click="jobs.selectAll"
+      >
+        Select all
+      </button>
+      <button
+        class="bg-slate-500 px-2 mx-2 rounded-xl hover:animate-pulse"
+        @click="jobs.deselectAll"
+      >
+        Deselect all
+      </button>
     </section>
     
   </div>
