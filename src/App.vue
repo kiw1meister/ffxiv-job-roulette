@@ -6,6 +6,12 @@
 
   let popUpDisplay = ref<boolean>(false)
   let rolledJob = ref(null)
+  let filterMenuDisplay = ref<boolean>(false);
+
+  const showFilterMenu = () => {
+    filterMenuDisplay.value = true;
+    console.log(filterMenuDisplay.value);
+  }
 </script>
 
 <template>
@@ -14,6 +20,15 @@
       <h1 class="text-5xl">FFXIV Job Roulette</h1>
       <p>Made in Vue.js by Shion with love <3</p>
     </div>
+    <div class="flex justify-center">
+      <button
+        class="bg-black rounded-xl px-3 animate-pulse mx-auto"
+        @click="showFilterMenu"
+      >
+        Filter Classes
+      </button>
+    </div>
+    <FilterMenu />
     <div class="p-5">
       <SpinWheel
         class="w-full h-full"
@@ -25,6 +40,5 @@
       :playJob="rolledJob"
       @popUpDisplay="popUpDisplay = false"
     />
-    <FilterMenu />
   </body>
 </template>
