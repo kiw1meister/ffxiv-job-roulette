@@ -35,32 +35,44 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="bg-black rounded-xl p-3">
-    <section class="text-center">
+  <div class="flex flex-col bg-black rounded-xl w-fit p-3">
+    <section class="mx-auto border-b border-white">
       Tanks
-      <p v-for="job in ffxivJobs.filter(job => job.role === 'Tank')" :key="job.name">
+      <label v-for="job in ffxivJobs.filter(job => job.role === 'Tank')" :key="job.name">
+        <input type="checkbox" :value="job.name" />
         {{ job.name }}
-      </p>
+      </label>
     </section>
-    <section>z
+    <section class="mx-auto">
       Melee DPS
-      <p v-for="job in ffxivJobs.filter(job => job.role === 'Melee DPS')" :key="job.name">
+      <label v-for="job in ffxivJobs.filter(job => job.role === 'Melee DPS')" :key="job.name">
+        <input type="checkbox" :value="job.name" />
         {{ job.name }}
-      </p>
+      </label>
       Physical Ranged DPS
-      <p v-for="job in ffxivJobs.filter(job => job.role === 'Physical Ranged DPS')" :key="job.name">
+      <label v-for="job in ffxivJobs.filter(job => job.role === 'Physical Ranged DPS')" :key="job.name">
+        <input type="checkbox" :value="job.name" />
         {{ job.name }}
-      </p>
+      </label>
       Magical Ranged DPS
-      <p v-for="job in ffxivJobs.filter(job => job.role === 'Magical Ranged DPS')" :key="job.name">
+      <label v-for="job in ffxivJobs.filter(job => job.role === 'Magical Ranged DPS')" :key="job.name">
+        <input type="checkbox" :value="job.name" />
         {{ job.name }}
-      </p>
+      </label>
     </section>
-    <section>
+    <section class="mx-auto">
       Healers
-      <p v-for="job in ffxivJobs.filter(job => job.role === 'Healer')" :key="job.name">
+      <label v-for="job in ffxivJobs.filter(job => job.role === 'Healer')" :key="job.name">
+        <input type="checkbox" :value="job.name" />
         {{ job.name }}
-      </p>
+      </label>
+    </section>
+    <section class="mx-auto">
+      Limited Jobs
+      <label v-for="job in ffxivJobs.filter(job => job.role === 'Limited Job')" :key="job.name">
+        <input type="checkbox" :value="job.name" />
+        {{ job.name }}
+      </label>
     </section>
   </div>
 </template>
