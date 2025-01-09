@@ -215,11 +215,14 @@ export const ffxivJobs = [
         weight: 1
     },
     //Limited
-    // blu: {
-    //     id: 22,
-    //     name: "Blue Mage",
-    //     role: "Limited Job",
-    //     icon: "",
-    //     pic: "",
-    // }
+    {
+        id: 22,
+        name: "Blue Mage",
+        role: "Limited Job",
+        icon: "",
+        pic: "",
+        bgColor: "#732828",
+        color: '#ffffff',
+        weight: 1
+    }
 ]
