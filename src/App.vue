@@ -22,7 +22,7 @@
     </div>
     <div class="flex justify-center">
       <button
-        class="bg-black rounded-xl px-3 animate-pulse mx-auto"
+        class="bg-black rounded-xl px-3 hover:animate-pulse mx-auto"
         @click="showFilterMenu"
       >
         Filter Classes

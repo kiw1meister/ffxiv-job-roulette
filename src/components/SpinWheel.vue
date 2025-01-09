@@ -1,13 +1,14 @@
 <script setup lang="ts">
-    import { ref } from 'vue'
+    import { ref, watch } from 'vue'
     import FortuneWheel from 'vue-fortune-wheel'
     import { Job } from '../assets/interfaces/Job';
     import { useJobStore } from '../stores/JobStore';
     import 'vue-fortune-wheel/style.css'
+    import { storeToRefs } from 'pinia';
 
-    const emit = defineEmits(['playJob', 'popUpDisplay'])
+    const emit = defineEmits(['playJob', 'popUpDisplay']);
   
-    const canvasVerify = ref(false) // Whether the turntable in canvas mode is enabled for verification
+    const canvasVerify = ref(false); // Whether the turntable in canvas mode is enabled for verification
     
     const canvasOptions = {
         btnWidth: 140,
@@ -22,9 +23,13 @@
     }
   
     const jobs = useJobStore();
+    const { selectedJobs } = storeToRefs(jobs); // Make `selectedJobs` reactive
 
-    // Test store modification
-    // jobs.useMock();
+    // Force re-render on changes
+    const selectedJobsKey = ref(0);
+    watch(selectedJobs, () => {
+      selectedJobsKey.value++;
+    }, { deep: true }); // Use deep to watch for array changes
   
     function onRotateEnd (job: Job) {
         //alert("You should play " + job.name + "!")
@@ -37,10 +42,11 @@
     <div class="flex items-center justify-center">
       <FortuneWheel
         style="width: 500px; max-width: 100%;"
+        :key="selectedJobsKey"
         :verify="canvasVerify"
         :canvas="canvasOptions"
         :useWeight="true"
-        :prizes="jobs.list"
+        :prizes="selectedJobs"
         @rotateEnd="onRotateEnd"
       />
     </div>

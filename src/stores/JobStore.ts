@@ -1,28 +1,27 @@
-import { reactive } from "vue";
+import { ref, reactive } from "vue";
 import { defineStore } from "pinia";
 import { ffxivJobs } from "../assets/JobList";
+import { Job } from "../assets/interfaces/Job";
 
 export const useJobStore = defineStore(
     'jobStore',
     () => {
-        let list = reactive(ffxivJobs);
+        const allJobs = reactive([...ffxivJobs]); // Source data for all jobs
+        const selectedJobs = ref([]); // Array to hold selected jobs
 
-        function useMock() {
-            // Clear the original list and populate it with new data
-            list.splice(0, list.length, ...[
-                {
-                    id: 1,
-                    name: "Paladin",
-                    role: "Tank",
-                    icon: "https://lds-img.finalfantasyxiv.com/promo/h/V/NUXU4h6iXzF8HS4BxHKYf7vOa0.png",
-                    pic: "https://i.kym-cdn.com/photos/images/original/001/721/586/194.png",
-                    bgColor: "#2d3a80",
-                    color: '#ffffff',
-                    weight: 1
+        // Toggle a job's selection
+        const toggleJob = (job:Job, isChecked:boolean) => {
+            if (isChecked) {
+                if (!selectedJobs.value.some(selected => selected.name === job.name)) {
+                    selectedJobs.value.push(job); // Add to selected jobs
                 }
-            ]);
-        }
+            } else {
+                selectedJobs.value = selectedJobs.value.filter(
+                    selected => selected.name !== job.name
+                ); // Remove from selected jobs
+            }
+        };
         
-        return { list, useMock };
+        return { allJobs, selectedJobs, toggleJob };
     }
 )
