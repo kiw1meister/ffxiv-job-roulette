@@ -6,5 +6,5 @@ export interface Job {
     pic: string,
     bgColor: string,
     color: string,
-    probability: number
+    weight: number
 }

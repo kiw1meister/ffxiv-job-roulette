@@ -2,40 +2,41 @@
 import { computed } from 'vue';
 import { useJobStore } from '../stores/JobStore';
 import { ffxivJobs } from '../assets/JobList';
+import { Job } from '../assets/interfaces/Job';
 
 const jobs = useJobStore();
 
 // Filter the jobs to show their respective roles
 const tankJobs = computed(() => 
-  jobs.allJobs.filter(job => job.role === "Tank")
+  ffxivJobs.filter(job => job.role === "Tank")
 );
 
 const meleeJobs = computed(() => 
-  jobs.allJobs.filter(job => job.role === "Melee DPS")
+  ffxivJobs.filter(job => job.role === "Melee DPS")
 );
 
 const rangedJobs = computed(() => 
-  jobs.allJobs.filter(job => job.role === "Physical Ranged DPS")
+  ffxivJobs.filter(job => job.role === "Physical Ranged DPS")
 );
 
 const magicJobs = computed(() => 
-  jobs.allJobs.filter(job => job.role === "Magical Ranged DPS")
+  ffxivJobs.filter(job => job.role === "Magical Ranged DPS")
 );
 
 const healerJobs = computed(() => 
-  jobs.allJobs.filter(job => job.role === "Healer")
+  ffxivJobs.filter(job => job.role === "Healer")
 );
 
 const limitedJobs = computed(() => 
-  jobs.allJobs.filter(job => job.role === "Limited Job")
+  ffxivJobs.filter(job => job.role === "Limited Job")
 );
 
 // Check if a job is selected
-const isJobSelected = (job) => {
+const isJobSelected = (job:Job) => {
   return jobs.selectedJobs.some(selected => selected.name === job.name);
 }
 // Handle checkbox change
-const onCheckboxChange = (job, isChecked) => {
+const onCheckboxChange = (job:Job, isChecked:boolean) => {
   jobs.toggleJob(job, isChecked);
 };
 
@@ -86,7 +87,7 @@ const onCheckboxChange = (job, isChecked) => {
             type="checkbox" 
             :value="job.name"
             :checked="isJobSelected(job)"
-            @change="onCheckboxChange(job, $event.target.checked)"
+            @change="onCheckboxChange(job, ($event.target as HTMLInputElement).checked)"
           />
           {{ job.name }}
         </label>
@@ -106,7 +107,7 @@ const onCheckboxChange = (job, isChecked) => {
             type="checkbox" 
             :value="job.name"
             :checked="isJobSelected(job)"
-            @change="onCheckboxChange(job, $event.target.checked)"
+            @change="onCheckboxChange(job, ($event.target as HTMLInputElement).checked)"
           />
           {{ job.name }}
         </label>
@@ -126,7 +127,7 @@ const onCheckboxChange = (job, isChecked) => {
             type="checkbox" 
             :value="job.name"
             :checked="isJobSelected(job)"
-            @change="onCheckboxChange(job, $event.target.checked)"
+            @change="onCheckboxChange(job, ($event.target as HTMLInputElement).checked)"
           />
           {{ job.name }}
         </label>
@@ -146,7 +147,7 @@ const onCheckboxChange = (job, isChecked) => {
             type="checkbox" 
             :value="job.name"
             :checked="isJobSelected(job)"
-            @change="onCheckboxChange(job, $event.target.checked)"
+            @change="onCheckboxChange(job, ($event.target as HTMLInputElement).checked)"
           />
           {{ job.name }}
         </label>
@@ -166,7 +167,7 @@ const onCheckboxChange = (job, isChecked) => {
             type="checkbox" 
             :value="job.name"
             :checked="isJobSelected(job)"
-            @change="onCheckboxChange(job, $event.target.checked)"
+            @change="onCheckboxChange(job, ($event.target as HTMLInputElement).checked)"
           />
           {{ job.name }}
         </label>
@@ -186,7 +187,7 @@ const onCheckboxChange = (job, isChecked) => {
             type="checkbox" 
             :value="job.name"
             :checked="isJobSelected(job)"
-            @change="onCheckboxChange(job, $event.target.checked)"
+            @change="onCheckboxChange(job, ($event.target as HTMLInputElement).checked)"
           />
           {{ job.name }}
         </label>

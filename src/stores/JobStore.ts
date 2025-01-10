@@ -16,9 +16,7 @@ export const useJobStore = defineStore(
                     selectedJobs.value.push(job); // Add to selected jobs
                 }
             } else {
-                selectedJobs.value = selectedJobs.value.filter(
-                    selected => selected.name !== job.name
-                ); // Remove from selected jobs
+                selectedJobs.value = selectedJobs.value.filter(selected => selected.name !== job.name); // Remove from selected jobs
             }
         };
 
