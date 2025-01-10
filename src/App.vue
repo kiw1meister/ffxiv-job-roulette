@@ -36,6 +36,7 @@
         class="w-full h-full"
         @playJob="(job) => rolledJob = job"
         @popUpDisplay="popUpDisplay = true"
+        @click="filterMenuDisplay = false"
         />
     </div>
     <PopUp v-if="popUpDisplay"
