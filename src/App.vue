@@ -9,8 +9,7 @@
   let filterMenuDisplay = ref<boolean>(false);
 
   const showFilterMenu = () => {
-    filterMenuDisplay.value = true;
-    console.log(filterMenuDisplay.value);
+    filterMenuDisplay.value = !filterMenuDisplay.value;
   }
 </script>
 
@@ -22,12 +21,13 @@
     </div>
     <div class="flex flex-col justify-center">
       <button
-        class="bg-black text-white rounded-xl px-3 hover:animate-pulse mx-auto text-xl mb-2"
+        class="bg-black text-white rounded-xl px-3 py-2 hover:animate-pulse mx-auto text-xl mb-2"
         @click="showFilterMenu"
       >
-        Filter Classes
+        <p v-if="filterMenuDisplay === false">Filter Classes</p>
+        <p v-else>Close Menu</p>
       </button>
-      <div class="mx-auto">
+      <div v-if="filterMenuDisplay === true" class="mx-auto">
         <FilterMenu />
       </div>
     </div>
