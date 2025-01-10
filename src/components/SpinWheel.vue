@@ -49,7 +49,6 @@
         :useWeight="true"
         :prizes="selectedJobs"
         @rotateEnd="onRotateEnd"
-        :duration="10"
       />
     </div>
 </template>
