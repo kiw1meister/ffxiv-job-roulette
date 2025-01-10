@@ -24,7 +24,7 @@
         class="bg-black text-white rounded-xl px-3 py-2 hover:animate-pulse mx-auto text-xl mb-2"
         @click="showFilterMenu"
       >
-        <p v-if="filterMenuDisplay === false">Filter Classes</p>
+        <p v-if="filterMenuDisplay === false">Filter Jobs</p>
         <p v-else>Close Menu</p>
       </button>
       <div v-if="filterMenuDisplay === true" class="mx-auto">
