@@ -41,6 +41,7 @@
 <template>
     <div class="flex items-center justify-center">
       <FortuneWheel
+        class="z-0"
         style="width: 500px; max-width: 100%;"
         :key="selectedJobsKey"
         :verify="canvasVerify"
