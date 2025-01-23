@@ -40,35 +40,6 @@ const onCheckboxChange = (job:Job, isChecked:boolean) => {
   jobs.toggleJob(job, isChecked);
 };
 
-// const openSidebar = ref<boolean>(false);
-// const toggleSidebar = () => {
-//   openSidebar.value = !openSidebar.value;
-// };
-
-// const handleClickOutside = (event: MouseEvent) => {
-//   const target = event.target as HTMLElement;
-//   if (target && target.classList) {
-//     if (
-//       !target.classList.contains('hamburger') &&
-//       !target.classList.contains('hamburger-lines') &&
-//       !target.classList.contains('hamburger-line')
-//     ) {
-//       const sidebarElement = document.querySelector('.sidebar');
-//       if (openSidebar.value && sidebarElement) {
-//         openSidebar.value = false;
-//       }
-//     }
-//   }
-// };
-
-// onMounted(() => {
-//   document.addEventListener('click', handleClickOutside);
-// });
-
-// onBeforeUnmount(() => {
-//   document.removeEventListener('click', handleClickOutside);
-// });
-
 </script>
 
 <template>
