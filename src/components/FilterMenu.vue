@@ -47,7 +47,10 @@ const onCheckboxChange = (job:Job, isChecked:boolean) => {
 
     <!-- Tanks Section -->
     <section class="text-center mb-2 pb-2 border-b">
-      <h2 class="text-lg font-bold mb-2">Tanks</h2>
+      <div class="flex justify-center">
+        <img src="https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png" alt="tank icon" class="w-auto h-7 hover:animate-pulse cursor-pointer">
+        <h2 class="text-lg font-bold mb-2 pl-1">Tanks</h2>
+      </div>
       <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in tankJobs" 
@@ -67,7 +70,10 @@ const onCheckboxChange = (job:Job, isChecked:boolean) => {
 
     <!-- Melee Section -->
     <section class="text-center mb-2 pb-2 border-b">
-      <h2 class="text-lg font-bold mb-2">Melee DPS</h2>
+      <div class="flex justify-center">
+        <img src="https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png" alt="melee icon" class="w-auto h-7 hover:animate-pulse cursor-pointer">
+        <h2 class="text-lg font-bold mb-2 pl-1">Melee DPS</h2>
+      </div>
       <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in meleeJobs" 
@@ -87,7 +93,10 @@ const onCheckboxChange = (job:Job, isChecked:boolean) => {
 
     <!-- Ranged Section -->
     <section class="text-center mb-2 pb-2 border-b">
-      <h2 class="text-lg font-bold mb-2">Physical Ranged DPS</h2>
+      <div class="flex justify-center">
+        <img src="https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png" alt="physical ranged icon" class="w-auto h-7 hover:animate-pulse cursor-pointer">
+        <h2 class="text-lg font-bold mb-2 pl-1">Physical Ranged DPS</h2>
+      </div>
       <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in rangedJobs" 
@@ -107,7 +116,10 @@ const onCheckboxChange = (job:Job, isChecked:boolean) => {
 
     <!-- Magic Section -->
     <section class="text-center mb-2 pb-2 border-b">
-      <h2 class="text-lg font-bold mb-2">Magical Ranged DPS</h2>
+      <div class="flex justify-center">
+        <img src="https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png" alt="magical ranged icon" class="w-auto h-7 hover:animate-pulse cursor-pointer">
+        <h2 class="text-lg font-bold mb-2 pl-1">Magical Ranged DPS</h2>
+      </div>
       <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in magicJobs" 
@@ -127,7 +139,10 @@ const onCheckboxChange = (job:Job, isChecked:boolean) => {
 
     <!-- Healer Section -->
     <section class="text-center mb-2 pb-2 border-b">
-      <h2 class="text-lg font-bold mb-2">Healers</h2>
+      <div class="flex justify-center">
+        <img src="https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png" alt="healer icon" class="w-auto h-7 hover:animate-pulse cursor-pointer">
+        <h2 class="text-lg font-bold mb-2 pl-1">Healers</h2>
+      </div>
       <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in healerJobs" 
@@ -147,7 +162,10 @@ const onCheckboxChange = (job:Job, isChecked:boolean) => {
 
     <!-- Limited Jobs -->
     <section class="text-center mb-2 pb-2 border-b">
-      <h2 class="text-lg font-bold mb-2">Limited Jobs</h2>
+      <div class="flex justify-center">
+        <img src="https://static.wikia.nocookie.net/finalfantasy/images/a/a3/FFXIV_Quest_Icon.png" alt="limited job icon" class="w-auto h-7 hover:animate-pulse cursor-pointer">
+        <h2 class="text-lg font-bold mb-2 pl-1">Limited Jobs</h2>
+      </div>
       <div class="flex flex-wrap justify-center gap-2">
         <label 
           v-for="job in limitedJobs" 
